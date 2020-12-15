@@ -1,0 +1,338 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Phetsarath OT';
+}
+body{
+    background-color: #fff;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.logo{
+    flex: 20%;
+}
+.logo img{
+    height: auto;
+    width: 13%;
+    margin-top: 5%;
+    float: left;
+}
+.gridH{
+    flex: 20%;
+}
+.gridH ul.menu li{
+    list-style-type: none;
+}
+ul.menu li a{
+    text-decoration: none;
+    color: #000;
+}
+ul.menu li a:hover{
+    color: #FFB000;
+    transition: 0.4s;
+
+}
+.gridH ul.menu{
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(3,15%) repeat(2,26%);
+}
+.menu li a.action{
+    color: #FFB000;
+    text-decoration: underline;
+
+}
+
+
+
+
+/* ============================= responsive ================================== */
+@media (max-width: 800px) {
+    .header {
+      flex-direction: column;
+    }
+    .gridH ul.menu{
+        grid-template-columns: repeat(3,15%) repeat(2,30%);
+    }
+    ul.menu li a{
+        font-size: 3vw;
+    }
+    .header .logo a img{
+        display: none;
+    } 
+    .bar ul.menu2{
+        display: grid;
+        grid-template-columns: repeat(3,32%) 20%;
+    }
+    .resBar{
+        margin-top: 5%;
+    }
+    .bar ul.menu2 li a{
+        font-size: 14px;
+    }
+    .Rcontent .row1 .contRow,.row2 .contRow{
+        display: flex;
+        flex-direction: column;
+    }
+    .Lcontent,.Rcontent{
+        width: 100%;
+    }
+    .searchButton{
+        margin-left: -50%;
+    }
+}
+
+/* ++++++++++++++++++++++++++++++++++++ Bar ++++++++++++++++++++++++++++++++ */
+
+.bar{
+    margin-top: 1%;
+    background-color: #FFB000;
+    padding: 0.7% 0 0.7% 0;
+}
+ul.menu2{
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: repeat(3,12%) 30%;
+}
+ul.menu2 li{
+    list-style-type: none;
+}
+ul.menu2 li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2vw;
+}
+ul.menu2 li a:hover{
+    color: #fff;
+    transition: 0.4s;
+
+}
+ul.menu2 .actionBar{
+    color: #fff;
+}
+
+    .search {
+        width: 100%;
+        position: relative;
+        display: flex;
+    }
+    
+    .searchTerm {
+        width: 70%;
+        border: 3px solid #fff;
+        border-right: none;
+        height: 25px;
+        border-radius: 10px 0 0 10px;
+        outline: none;
+        padding-left: 3%;
+    }
+    
+    .searchTerm:focus{
+        color: #FFB000;
+    }
+    
+    .searchButton {
+        width: 10%;
+        border: 1px solid #fff;
+        text-align: center;
+        color: #FFB000;
+        background-color: #fff;
+        border-radius: 0 10px 10px 0;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+/* ================================= Content =============================================== */
+
+#top{
+    font-weight: bold;
+}
+.content{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.Lcontent{
+    width: 50%;
+    float: left;
+}
+.post:hover{
+    outline:4px solid #FFB000;
+    transition: 0.4s;
+
+
+}
+.post{
+    margin-top: 10%;
+    width: 80%;
+    height: 67%;
+    background-color: #fff;
+    box-shadow: 3px 3px 10px 0.2px #cacaca;
+}
+.Lcontent .post img{
+    height: auto;
+    width: 100%;
+}
+
+.Lcontent .post .textPost{
+    margin:4% 0 0 2%;
+}
+.textPost p{
+    margin-top: 5%;
+}
+.textPost #top{
+    font-size: 23;
+    margin-top: 10%; 
+}
+.textPost h5{
+    margin-top: 5%;
+    color: red;
+    text-decoration: underline;
+}
+.Rcontent{
+    width: 50%;
+    float: left;
+    display: table;
+    margin-top: 5%;
+}
+.postR{
+    background-color: #fff;
+    box-shadow: 3px 3px 10px 0.2px #cacaca;
+    width: 300px;
+    height: 233px;
+    margin:0% 5% 5% 0%;
+}
+.postR:hover{
+    outline:4px solid #FFB000;
+    transition: 0.4s;
+
+}
+.postR img{
+    height: auto;
+    width: 100%;
+}
+#top{
+    font-weight: bold;
+}
+.textPostR p{
+    margin-left: 5%;
+    margin-top: 5%;
+}
+.contRow{
+    display: flex;
+    flex-direction: row;
+}
+.detailPost{
+    display: none
+}
+#read{
+    display: none ;
+}
+@media screen and (max-width:800px) {
+    .post{
+        width: 180%;
+        height: 55%;
+        margin-left: 10%;
+    }
+    .Rcontent{
+        margin-left: 4%;
+    }
+    .textPost #top{
+        font-size: 18; 
+    }
+    .searchTerm {
+        display: none;
+    }
+    .searchButton {
+        margin-top: 2;
+        color: #000;
+        background-color: #FFB000;
+        border: none;
+    }
+    .postR{
+        width: 300px;
+        height: 410px;
+        margin:0% 5% 5% 0%;
+    }
+    .textPostR p{
+    margin-left: 0%;
+    margin-top: 5%;
+    }
+    #read{
+        padding: 5px;
+        color: red;
+        display: grid;
+    }
+    .detailPost{
+        display: grid;
+    }
+
+  }
+
+/* ==================  Footer  ==================== */
+.hr{
+    margin-top: 5%;
+    width: 80%;
+    opacity: 0.3;
+}
+.bgFooter{
+    margin-top: 3%;
+    height: 250px;
+}
+.footer{
+    display: grid;
+    grid-template-columns: repeat(2,300px);
+    margin-left: 10%;
+}
+.contact p.FB{
+    color: #2A81C4;
+    font-size: 30px;
+}
+.contact p{
+    margin-top: 10%;
+}
+.cont{
+    margin-top: 5%;
+}
+.contact ul li a img{
+    height: 20px;
+}
+.contact ul.cont{
+    display: grid;
+    grid-template-columns: repeat(2,60px);
+}
+.contact ul li{
+    list-style-type: none;
+}
+.cate{
+    padding-top: 8%;
+}
+ul.cateDetail li{
+    list-style-type: none;
+    margin-top: 10px;
+}
+ul.cateDetail li a{
+    text-decoration: none;
+    color: #000;
+}
+ul.cateDetail li.info{
+    font-size: 22px;
+}
+@media screen and (max-width:800px) {
+
+    .footer{
+        font-size: 3vw;
+    }
+    .contact p.FB{
+        font-size: 20px;
+    }
+    .cate{
+        margin-left: -30%;
+    }
+  }
+

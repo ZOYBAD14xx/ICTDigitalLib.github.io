@@ -1,0 +1,161 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Phetsarath OT';
+}
+body{
+    background-color: #FFB000;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.logo{
+    flex: 20%;
+}
+.logo img{
+    height: auto;
+    width: 25%;
+    margin-top: 8%;
+    float: left;
+}
+.gridH{
+    flex: 20%;
+}
+.gridH ul.menu li{
+    list-style-type: none;
+}
+ul.menu li a{
+    text-decoration: none;
+    color: black;
+}
+ul.menu li a:hover{
+    color: white;
+    transition: 0.4s;
+}
+.gridH ul.menu{
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(3,15%) repeat(2,26%);
+}
+.menu li a.action{
+    text-decoration: underline;
+    color: #fff ;
+
+}
+ul.menu li a.resis{
+    color: #000;
+    border:2px solid black;
+    padding: 6px 12px;
+    border-radius: 5px;
+}
+ul.menu li a.resis:hover{
+    background-color: #fff;
+    border:2px solid white;
+
+
+}
+
+/* ================================ responsive =============================== */
+@media (max-width: 800px) {
+    .header {
+      flex-direction: column;
+    }
+    .gridH ul.menu{
+        grid-template-columns: repeat(3,15%) repeat(2,31%);
+    }
+    ul.menu li a{
+        font-size: 3vw;
+    }
+    .detail{
+        margin: 5% 0 5% 0;
+        font-size:3vw;
+    }
+    .logoimg{
+        margin-left: 2%;
+        margin-top: 5%;
+    }
+    .textLogo{
+        margin-top: 5%;
+    }
+    .textLogo .ICT ,.textLogo .textlogo{
+        font-size: 60px;
+    }
+    .logoimg .lg0{
+        height: 40px;   
+    }
+    .logoimg .logo2{
+        height: 30px;
+        margin-left: 6%;
+        margin-bottom: 1%;
+    }
+    .rightSide img{
+        height: auto;
+        width: 60%;
+        position: relative;
+        margin-top: 5%;
+        margin-left: -30%;
+    }
+  }
+
+/* ==========================Content================== */
+
+.content{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.logoimg img{
+    margin-top: 5%;
+    height: 50px;
+    margin-left: 1.5%;
+}
+.logoimg img.lg1{
+    height: 40px;
+    margin-bottom: 0.5%;
+    margin-left: 2%;
+}
+.textLogo{
+    font-size: 100px;
+    font-weight: bold;
+}
+.textLogo .ICT{
+    color: #c7192d;
+    font-weight: bold;
+}
+.textLogo .textlogo{
+    text-shadow: 2px 2px #fff;
+}
+.detail{
+    color: #fff;
+}
+.btnMore button{
+    margin-top: 3%;
+    color: #FFB000;
+    background-color: #292D3E;
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+    height:32px;
+    font-size:14px;
+    transition: all 0.2s ease-in-out;
+    font-weight: bold;
+    font-family: "Product Sans";
+}
+.btnMore button:hover{
+    box-shadow: 2px 2px #fff, 3px 3px #FFf, 4px 4px #FFf;
+    transform: translateX(-3px);
+}
+.responsive {
+    width: 40%;
+    height: auto;
+    margin-top: -28%;
+  }
+  .rightSide img{
+      float: right;
+      position: absolute;
+      transform: translate(90%,0%);
+  }

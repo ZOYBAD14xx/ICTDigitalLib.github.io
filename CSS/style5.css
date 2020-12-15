@@ -1,0 +1,213 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Phetsarath OT';
+}
+body{
+    background-color: #0F1223;
+}
+.bgHead{
+    background-color: #fff;
+    height: 12%;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.logo{
+    flex: 20%;
+}
+.logo img{
+    height: auto;
+    width: 13%;
+    margin-top: 5%;
+    float: left;
+}
+.gridH{
+    flex: 20%;
+}
+.gridH ul.menu li{
+    list-style-type: none;
+}
+ul.menu li a{
+    text-decoration: none;
+    color: #000;
+}
+ul.menu li a:hover{
+    color: #FFB000;
+    transition: 0.4s;
+
+}
+.gridH ul.menu{
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(3,15%) repeat(2,26%);
+}
+.menu li a.action{
+    color: #FFB000;
+    text-decoration: underline;
+
+}
+
+
+
+/* ============================= responsive ================================== */
+@media (max-width: 800px) {
+    .header {
+      flex-direction: column;
+    }
+    .gridH ul.menu{
+        grid-template-columns: repeat(3,15%) repeat(2,30%);
+    }
+    ul.menu li a{
+        font-size: 3vw;
+    }
+    .header .logo a img{
+        display: none;
+    }
+    .bgHead{
+        height: 8%;
+    }
+}
+
+/* ==================== content ======================= */
+.content{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+#Topic{
+    color: #FFB000;
+    margin-top: 5%;
+    font-size: 24;
+}
+.topicAbout p{
+    color: #fff;
+    font-size: 30px;
+    margin: 5% 0 5% 0;
+}
+.aboutCont{
+    display: flex;
+    flex-direction: row;
+}
+.detL{
+    flex: 50%;
+}
+.detL p{
+    color: #fff;
+}
+#text{
+    text-align: start;
+}
+.detailAbout #text{
+    color: #fff;
+    margin-top: -10%;
+}
+.detR{
+    flex: 10%;
+}
+.detR img{
+    height: auto;
+    width: 100%;
+    position: relative;
+    transform: translate(0%,-45%);
+}
+.hr{
+    margin-top: 5%;
+    width: 80%;
+    opacity: 0.3;
+}
+@media screen and (max-width: 800px) {
+    .topicAbout p{
+        font-size: 4.5vw;
+    }
+    .detR img{
+        display: none;
+    }
+    .detL{
+        flex: 100%;
+        text-align: start;
+    }
+    .detailAbout #text{
+        margin-top: 1%;
+        text-align: start;
+    }
+}
+
+
+/* +++++++++++++++++ profile ++++++++++++++++ */
+.profile{
+    margin-left: 10%;
+    margin-left: 10%;
+}
+.boxP{
+    float: left;
+    margin-top: 5%;
+}
+.imgProfile{
+    width: 30%;
+    float: left;
+}
+.slc{
+    width: 70%;
+    float: left;
+}
+#slcP{
+    color: #FFB000;
+    font-size: 30px;
+}
+.imgProfile img{
+    height: auto;
+    width: 80%;
+}
+
+.infoP{
+    float: left;
+    color: #fff;
+    margin-top: 10%;
+    font-size: 20;
+}
+#Name{
+    font-size: 30px;
+}
+@media screen and (max-width: 800px) {
+    .slc #slcP{
+        font-size: 18px;
+    }
+    #Name{
+        font-size: 20;
+    }
+    .boxP{
+        margin-right: 10%;
+    }
+    
+    .infoP{
+        font-size: 15;
+    }
+}
+
+
+@media screen and (prefers-reduced-motion: no-preference) {
+    html,body {
+    scroll-behavior: smooth;
+    }
+  }
+  .back-to-top-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 3rem;
+    right: 50px;
+    float: right;
+    padding: 5px;
+    background: #FFB000;
+    border-radius: 0.2em;
+    position: fixed;
+    font-size: 25;
+  }
+  .back-to-top-link {
+      pointer-events: all;
+      top: calc(100vh - 5rem);
+    }
